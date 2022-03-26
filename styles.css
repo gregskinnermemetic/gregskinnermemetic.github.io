@@ -1,5 +1,27 @@
 * {
     font-family: 'Archivo', sans-serif;
-    font-weight: 200;
-    font-stretch: 1000%;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-size: 1.5em;
+}
+h1 {
+    font-size: 3rem;
+    font-stretch: 900%;
+    font-weight: 100;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+}
+.welcome-section, .introduction-section, .explanation-section {
+    flex: 1;
+    padding: 1em;
+}
+.manifesto-title {
+    display: inline;
+    font-size: 2rem;
 }

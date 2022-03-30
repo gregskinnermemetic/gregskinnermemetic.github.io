@@ -1,6 +1,7 @@
 body {
     font-family: 'Archivo', sans-serif;
-    background-color: black;
+    /* background-color: black; */
+    background-color: #082629;
     color: white;
     font-size: 1.5rem;
 }
@@ -38,9 +39,10 @@ img.memetic-logo {
     padding: 2rem;
 }
 .welcome-section {
-    display: flex;
     background-image: url("pexels-dio-alif-utomo-1525589.JPEG");
     background-size: cover;
+    display: flex;
+    mix-blend-mode: screen;
 }
 .welcome-section>h1 {
     font-weight: 700;
@@ -67,4 +69,25 @@ img.memetic-logo {
 
 .two-thirds-spacer {
     flex: 2;
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 450px) {
+    h1, h2, h3, img, .welcome-section, .content-section, .explainer-section>div {
+        margin: 0;
+        padding: 0.5rem;
+    }
+    .welcome-text>h1, img.memetic-logo, .explainer-section>div, {
+        padding: 0;
+    }
+    img.memetic-logo {
+        width: 10em;
+        margin: 0;
+        padding: 0;
+    }
+    h1 {
+        margin-bottom: 15rem;
+    }
 }

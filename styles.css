@@ -47,9 +47,7 @@ ul {
 
 a {
     color: white;
-
 }
-
 
 img.memetic-logo {
     width: 10em;
@@ -73,10 +71,10 @@ img.memetic-logo {
 }
 
 .welcome-section {
-    background-image: url("dark-water-background.jpg");
-    background-size: cover;
+    /* background-image: url("dark-water-background.jpg"); */
+    /* background-size: cover; */
     display: flex;
-    mix-blend-mode: screen;
+    /* mix-blend-mode: screen; */
 }
 
 .welcome-text {
@@ -117,6 +115,26 @@ img.memetic-logo {
     flex: 2;
 }
 
+
+* VIDEO */
+.video-container {
+    /* margin: 2rem; */
+    overflow: clip;
+    width: 100%;
+}
+video {
+    width: 100%;
+    height: 38rem;
+    position: absolute;
+    /* bottom: 0; */
+    z-index: -1;
+    overflow: clip;
+    object-fit: cover;
+    mix-blend-mode: overlay;
+
+}
+
+
 /* FOOTER */
 
 .footer {
@@ -124,6 +142,7 @@ img.memetic-logo {
     padding: 2rem;
     display: flex;
 }
+
 .footer div {
     flex: 1;
 }

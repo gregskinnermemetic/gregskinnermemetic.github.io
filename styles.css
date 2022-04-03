@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Archivo', sans-serif;
     /* background-color: black; */
@@ -5,53 +9,81 @@ body {
     color: white;
     font-size: 1.5rem;
 }
-h1, h2, h3 { 
+
+h1,
+h2,
+h3 {
     font-stretch: 125%;
     margin: 2rem 0;
 }
+
 h1 {
     font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 15rem;
 }
-h2, h3 {
+
+h2,
+h3 {
     font-size: 2rem;
 }
-h2 { 
+
+h2 {
     font-weight: 700;
-    }
+}
+
 h3 {
     font-weight: 400;
 }
+
 p {
     margin-bottom: 0.5rem;
 }
+
 ul {
     list-style-position: inside;
     margin-bottom: 0.5rem;
 }
 
+a {
+    color: white;
+
+}
+
 
 img.memetic-logo {
     width: 10em;
+}
+
+.logo-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin: 2rem 4rem;
 }
-.welcome-section, .content-section {
+
+/* .logo-menu img, .logo-menu a { */
+/* } */
+
+.welcome-section,
+.content-section {
     margin: 2rem;
     padding: 2rem;
+    margin-bottom: 10rem;
 }
+
 .welcome-section {
     background-image: url("dark-water-background.jpg");
     background-size: cover;
     display: flex;
     mix-blend-mode: screen;
 }
-.welcome-section>h1 {
-    font-weight: 700;
-}
 
 .welcome-text {
     flex: 1;
     min-width: 300px;
 }
+
 .welcome-text p {
     margin-bottom: 2rem;
 }
@@ -61,33 +93,105 @@ img.memetic-logo {
     display: flex;
     flex-wrap: wrap;
 }
-.explainer-section>div{
+
+.explainer-section>div {
     flex: 1;
     margin-right: 1rem;
     min-width: 300px;
 }
 
+.big-number {
+    font-size: 5rem;
+    font-weight: 50;
+    padding-bottom: 2.5rem;
+    border-bottom: 0.1rem solid white;
+}
+
+.content-alternate {
+    background-color: ;
+}
+
+/* SPACINGS  */
+
 .two-thirds-spacer {
     flex: 2;
 }
 
+/* FOOTER */
+
+.footer {
+    background-color: #020808;
+    padding: 2rem;
+    display: flex;
+}
+.footer div {
+    flex: 1;
+}
+
+/* OFF ON LARGER DISPLAYS */
+
+.mobile-only {
+    display: none;
+}
 
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 450px) {
-    h1, h2, h3, img, .welcome-section, .content-section, .explainer-section>div {
+    body {
+        font-size: 1.2rem;
+    }
+
+    h1,
+    h2,
+    h3,
+    img,
+    .welcome-section,
+    .content-section,
+    .explainer-section>div {
+        font-weight: 100;
         margin: 0;
         padding: 0.5rem;
     }
-    .welcome-text>h1, img.memetic-logo, .explainer-section>div, {
-        padding: 0;
-    }
+
     img.memetic-logo {
         width: 10em;
         margin: 0;
         padding: 0;
     }
-    h1 {
-        margin-bottom: 15rem;
+
+    .welcome-text>h1 {
+        padding: 0;
+        margin: 10rem 0;
+    }
+
+    .logo-menu {
+        margin: 0;
+    }
+
+    .mobile-only {
+        display: inline;
+    }
+
+    /* ANIMATIONS */
+
+    /* The animation code */
+    @keyframes carets {
+        from {
+            color: white;
+        }
+
+        to {
+            color: #082629;
+        }
+    }
+
+    /* The element to apply the animation to */
+    i {
+        color: white;
+        animation-name: carets;
+        animation-duration: 2s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in;
     }
 }

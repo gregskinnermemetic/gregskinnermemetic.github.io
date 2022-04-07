@@ -4,7 +4,6 @@ html {
 
 body {
     font-family: 'Archivo', sans-serif;
-    /* background-color: black; */
     background-color: #082629;
     color: white;
     font-size: 1.5rem;
@@ -14,37 +13,31 @@ h1,
 h2,
 h3 {
     font-stretch: 125%;
-    margin: 2rem 0;
 }
-
-h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 15rem;
-}
-
 h2,
 h3 {
     font-size: 2rem;
 }
-
+h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: 15rem;
+    text-transform: uppercase;
+}
 h2 {
     font-weight: 700;
+    width: 100%;
 }
-
 h3 {
     font-weight: 400;
 }
-
 p {
     margin-bottom: 0.5rem;
 }
-
 ul {
     list-style-position: inside;
     margin-bottom: 0.5rem;
 }
-
 a {
     color: white;
 }
@@ -53,59 +46,74 @@ img.memetic-logo {
     width: 10em;
 }
 
+
 .logo-menu {
     display: flex;
-    justify-content: space-between;
+    height: 10rem;
     align-items: center;
-    margin: 2rem 4rem;
+    margin: 0 4rem;
 }
 
-/* .logo-menu img, .logo-menu a { */
-/* } */
+.welcome-section, .explainer-section {
+    display: flex;
+    flex-wrap: wrap;
+}
 
-.welcome-section,
-.content-section {
-    margin: 2rem;
-    padding: 2rem;
-    margin-bottom: 10rem;
+video, 
+.welcome-section {
+    height: calc(100vh - 10rem);
+    min-height: 10rem;
 }
 
 .welcome-section {
-    /* background-image: url("dark-water-background.jpg"); */
-    /* background-size: cover; */
+    padding: 0 4rem;
+    align-content: center;
+}
+
+.content-section {
+    align-content: center;
     display: flex;
-    /* mix-blend-mode: screen; */
+    flex-wrap: wrap;
+    padding: 2rem;
+    margin: 2rem 2rem 10rem 2rem;
+    min-height: 100vh;
 }
 
 .welcome-text {
     flex: 1;
     min-width: 300px;
 }
-
 .welcome-text p {
     margin-bottom: 2rem;
 }
 
-
-.explainer-section {
+.explainer-content {
+    align-content: flex-start;
     display: flex;
-    flex-wrap: wrap;
-}
-
-.explainer-section>div {
     flex: 1;
+    flex-wrap: wrap;
+    margin: 5rem 0;
     margin-right: 1rem;
     min-width: 300px;
 }
 
+.content-numbered .explainer-content h3 {
+    margin-left: 1rem;
+}
+
+.explainer-content p{
+    width: 100%;
+    margin-top: 2.5rem;
+}
+
 .big-number {
-    font-size: 5rem;
+    font-size: 2rem;
     font-weight: 50;
 }
 
 .content-alternate {
-    background: rgb(255,255,255);
-    background: linear-gradient(315deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.2) 100%);
+    background: rgb(255, 255, 255);
+    background: linear-gradient(315deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.2) 100%);
 }
 
 /* SPACINGS  */
@@ -115,15 +123,15 @@ img.memetic-logo {
 }
 
 
-* VIDEO */ .video-container {
-    /* margin: 2rem; */
+/* VIDEO */ 
+
+.video-container {
     overflow: clip;
     width: 100%;
 }
 
 video {
     width: 100%;
-    height: 38rem;
     position: absolute;
     /* bottom: 0; */
     z-index: -1;
@@ -140,10 +148,13 @@ video {
     background-color: #020808;
     padding: 2rem;
     display: flex;
+    flex-wrap: wrap;
 }
-
 .footer div {
     flex: 1;
+}
+.copyright {
+    width: 100%;
 }
 
 /* OFF ON LARGER DISPLAYS */
@@ -154,21 +165,24 @@ video {
 
 /* MEDIA QUERIES */
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 900px) {
     body {
         font-size: 1.2rem;
     }
 
     h1,
     h2,
-    h3,
     img,
     .welcome-section,
     .content-section,
-    .explainer-section>div {
+    .explainer-section {
         font-weight: 100;
         margin: 0;
-        padding: 0.5rem;
+        padding-left: 0.5rem;
+    }
+
+    video {
+        height: calc(100vh - 3rem);
     }
 
     img.memetic-logo {
@@ -178,40 +192,49 @@ video {
     }
 
     .welcome-text>h1 {
-        margin: 10rem 0;
+        font-size: 2rem;
+        font-weight: 900;
     }
+
     .welcome-text p {
         padding: 0.5rem;
     }
 
+    .welcome-section {
+        height: calc(100vh - 3rem);
+    }
+    .content-section {
+        justify-content: end;
+    }
+
+    .content-section p {
+        margin: 0.5rem 0;
+    }
+    .content-section>p {
+        margin: 0.5rem;
+    }
+
     .logo-menu {
+        height: 3rem;
         margin: 0;
+    }
+
+    .logo-menu img {
+        height: 3rem;
+        width: auto;
     }
 
     .mobile-only {
         display: inline;
+        margin-left: 0.5rem;
     }
 
-    /* ANIMATIONS */
-
-    /* The animation code */
-    @keyframes carets {
-        from {
-            color: white;
-        }
-
-        to {
-            color: #082629;
-        }
-    }
-
-    /* The element to apply the animation to */
-    i.fa-solid {
-        color: white;
-        animation-name: carets;
-        animation-duration: 2s;
-        animation-direction: alternate;
-        animation-iteration-count: infinite;
-        animation-timing-function: ease-in;
+    .two-thirds-spacer {
+        display: none;
     }
 }
+
+
+/* COLORS */
+/* racing green #004225; */
+/* dark cyan: #082629; */

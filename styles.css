@@ -69,7 +69,9 @@ video,
     padding: 0 4rem;
     align-content: center;
 }
-
+.welcome-image { 
+    display: none;
+}
 .content-section {
     align-content: center;
     display: flex;

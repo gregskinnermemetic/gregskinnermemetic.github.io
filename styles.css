@@ -70,6 +70,7 @@ section > h2 { margin: 4rem;}
     flex: 1;
     padding: 4rem;
 }
+.small-mobile { display: none;}
 
 
 /* HEADER */
@@ -95,6 +96,22 @@ img.memetic-logo, .home-anchor { height: 3rem; }
     padding: 0 4rem;
 }
 .hero-section div { max-width: 40rem; }
+.profile-details { 
+    padding: 0 !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.profile-details span {
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.profile-details button { 
+    font-size: 2rem;
+    padding: 1rem;
+    margin: 0;
+}
 
 /* COLOURS */
 
@@ -239,7 +256,6 @@ img.memetic-logo, .home-anchor { height: 3rem; }
     border-radius: 2px;
 }
 
-.small-mobile { display: none;}
 
 /* MEDIA QUERIES */
 

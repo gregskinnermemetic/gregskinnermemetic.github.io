@@ -29,10 +29,6 @@ function checkScroll() {
         menu.style.backgroundColor = '#082629';  // Fully black for other sections
     }
 
-    // Ensure the menu becomes transparent when within "section0"
-    if (scrollPos < section0Height) {
-        menu.style.backgroundColor = 'transparent';
-    }
 }
 
 // Add scroll event listener

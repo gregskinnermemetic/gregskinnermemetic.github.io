@@ -26,7 +26,6 @@ h1 {
 h2 {
     font-weight: 200;
     margin-top: 5rem;
-    width: 100%;
 }
 h3 { font-weight: 200; }
 p { margin-bottom: 0.5rem; }
@@ -57,8 +56,10 @@ video {
     height: calc(100vh - 32rem);
     min-height: 600px;
 }
-section > h2 { margin: 4rem;}
-
+section > h1, section > h2 { 
+    padding: 4rem;
+}
+section > p { padding: 2rem 4rem;}
 
 /* LAYOUT */
 
@@ -79,23 +80,16 @@ img.memetic-logo, .home-anchor { height: 3rem; }
 
 /* CONTENT */
 
-.hero-section, video {
-    align-items: center;
-    color: white;
-    display: flex;
-    min-height: 600px;
-    max-height: 2160px;
-}
-.video-container {
-    overflow: clip;
-    width: 100%;
-}
-
 .hero-section {
-    height: calc(100vh - 35rem);
-    padding: 0 4rem;
+    /* align-items: left; */
+    background-color: #082629;
+    color: white;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* min-height: 600px; */
+    /* max-height: 2160px; */
+    /* height: calc(100vh - 35rem); */
 }
-.hero-section div { max-width: 40rem; }
 .profile-details { 
     padding: 0 !important;
     display: flex;
@@ -112,7 +106,7 @@ img.memetic-logo, .home-anchor { height: 3rem; }
     padding: 1rem;
     margin: 0;
 }
-.people { padding: 0 3rem;}
+.people { padding: 0 3rem 6rem 3rem;}
 .people div {
     padding: 0 1rem;
     max-width: 400px;
@@ -121,7 +115,6 @@ img.memetic-logo, .home-anchor { height: 3rem; }
     font-size: 2rem;
     min-height: 5rem;
 }
-.people >div { border-bottom: 5px solid white;}
 
 /* COLOURS */
 
@@ -233,6 +226,7 @@ img.memetic-logo, .home-anchor { height: 3rem; }
 /* Sticky Menu Styles */
 .sticky-menu {
     align-items: center;
+    background-color: #082629;
     display: flex;
     font-weight: 100;
     height: auto;
@@ -296,7 +290,8 @@ img.memetic-logo, .home-anchor { height: 3rem; }
         font-size: 2rem;
         margin-bottom: 1rem;
     }
-    section > h2 { margin: 2rem 1rem;}
+    section > h2, section > h1 { margin: 2rem 1rem;}
+    .sticky-menu { padding: 0 1rem;}
 }
 
 
